@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		499C6C531DB0F05B00008904 /* DevIO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DevIO; sourceTree = BUILT_PRODUCTS_DIR; };
 		499C6C561DB0F05B00008904 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		499C6C5E1DB0FBD200008904 /* devio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = devio.h; sourceTree = "<group>"; };
+		499C6C601DB1C48500008904 /* dev_wireless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_wireless.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,8 @@
 		499C6C551DB0F05B00008904 /* DevIO */ = {
 			isa = PBXGroup;
 			children = (
+				499C6C601DB1C48500008904 /* dev_wireless.h */,
+				499C6C5E1DB0FBD200008904 /* devio.h */,
 				499C6C561DB0F05B00008904 /* main.cpp */,
 			);
 			path = DevIO;
