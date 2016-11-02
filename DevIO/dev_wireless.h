@@ -1,10 +1,11 @@
 #pragma once 
 
-#include "devio.h"
-
+// sys
 #include <string>
 #include <functional>
 
+// usr
+#include "devbase.h"
 
 class DevWrieless : public Devio {
 public:
@@ -27,20 +28,4 @@ public:
 
 public:
 
-};
-
-class DevLTE : public Devio {
-public:
-    DevLTE();
-    ~DevLTE();
-
-public:
-    std::string ICCID();
-    std::string phoneNum();
-
-
-    bool dial(const std::string & number);
-    void handup();
-
-    void setDialStatusFunc(std::function<void()>);
 };

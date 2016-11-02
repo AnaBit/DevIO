@@ -8,4 +8,7 @@ SOURCES += \
 
 HEADERS += \
     DevIO/devio.h \
-    DevIO/dev_wireless.h
+    DevIO/dev_wireless.h \
+    DevIO/ltectrl.h \
+    DevIO/devbase.h \
+    DevIO/devkey.h
