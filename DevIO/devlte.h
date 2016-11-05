@@ -31,10 +31,14 @@ public:
 
     bool dial(const std::string & number);
     void handup();
-
-    DialStatus dialStatus() const;
-    void setCallbackDialStatusNotify(std::function<void(DialStatus)> && dialCallback);
+    DialStatus dialStatus();
+    void setCallbackDialStatusNotify(std::function<void(DialStatus, const std::string &)> && dialCallback);
 
     bool openCellularData();
     void closeCellularData();
+    CellularStatus cellularStatus();
+    void setCallbackCelluarStatusNotify(std::function<void(CellularStatus)> && cellularCallback);
+
+    // fmt : 2016-11-03 18:16:55
+    std::string date();
 };

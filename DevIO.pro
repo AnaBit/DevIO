@@ -4,10 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    DevIO/main.cpp
+    DevIO/main.cpp \
+    DevIO/mdtools/dev_type.cpp
 
 HEADERS += \
     DevIO/devio.h \
     DevIO/dev_wireless.h \
-    DevIO/ltectrl.h \
-    DevIO/devbase.h
+    DevIO/devbase.h \
+    DevIO/mdtools/dev_type.h \
+    DevIO/devlte.h
