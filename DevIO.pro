@@ -10,6 +10,12 @@ SOURCES += \
 HEADERS += \
     DevIO/devio.h \
     DevIO/dev_wireless.h \
+<<<<<<< HEAD
     DevIO/devbase.h \
     DevIO/mdtools/dev_type.h \
     DevIO/devlte.h
+=======
+    DevIO/ltectrl.h \
+    DevIO/devbase.h \
+    DevIO/devkey.h
+>>>>>>> 4d9f0286a4588fb205d8096e25164eb2cbcab29a
