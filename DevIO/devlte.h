@@ -7,6 +7,9 @@
 // usr
 #include "devbase.h"
 
+namespace dev {
+using std::string;
+
 enum class DialStatus{
     calling,
     connected,
@@ -17,7 +20,10 @@ enum class DialStatus{
 enum class CellularStatus {
     G2,
     G3,
-    G4
+    G4,
+    G5,
+    G6,
+    G7
 };
 
 class DevLTE : public Devio {
@@ -42,3 +48,6 @@ public:
     // fmt : 2016-11-03 18:16:55
     std::string date();
 };
+
+
+} // namespace dev

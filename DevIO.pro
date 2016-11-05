@@ -3,19 +3,16 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
+include(anabit.pri)
+
 SOURCES += \
     DevIO/main.cpp \
-    DevIO/mdtools/dev_type.cpp
+    DevIO/mdbus/ltebus/ltebus.c
 
 HEADERS += \
+    DevIO/mdbus/ltebus/ltebus.h \
+    DevIO/devbase.h \
     DevIO/devio.h \
-    DevIO/dev_wireless.h \
-<<<<<<< HEAD
-    DevIO/devbase.h \
-    DevIO/mdtools/dev_type.h \
-    DevIO/devlte.h
-=======
-    DevIO/ltectrl.h \
-    DevIO/devbase.h \
-    DevIO/devkey.h
->>>>>>> 4d9f0286a4588fb205d8096e25164eb2cbcab29a
+    DevIO/devkey.h \
+    DevIO/devlte.h \
+    DevIO/devwireless.h

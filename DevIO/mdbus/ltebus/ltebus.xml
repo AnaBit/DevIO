@@ -1,0 +1,94 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<node>
+    <!--
+        org.hsae.modem:
+        @short_description: using for 4g modem configure and monetor
+    -->
+
+    <!--
+        Name          Code in D-Bus   Data Type in glib    Data Type in libdbus-C++
+        BYTE          ‘y’             guchar               unsigned char
+        BOOLEAN       ‘b’             gboolean             bool
+        INT16         ‘n’             gint16               signed short
+        UINT16        ‘q’             guint16              unsigned short
+        INT32         ‘i’             gint                 int
+        UINT32        ‘u’             guint                unsigned int
+        INT64         ‘x’             gint64               signed long long
+        UINT64        ‘t’             guint64              unsigned long long
+        DOUBLE        ‘d’             gdouble              double
+        STRING        ‘s’             const gchar *        std::string
+        OBJECT_PATH   ‘o’             const gchar *        DBus::Path : public std::string
+        UNIX_FD       ‘h’             GVariant *           int
+        SIGNATURE     ‘g’             const gchar *        DBus::Signature : public std::string
+        STRUCT        ‘(‘ and ‘)’     Gvariant             DBus::Struct<>
+        ARRAY         ‘a’             Gvariant             std::vector<>
+        VARIANT       ‘v’             Gvariant             DBus::Variant
+        DICT_ENTRY  ‘{’ and ‘}’       Gvariant             When it is used together with ‘a’,
+                    (Only appear                           it is represented by std::map<>
+                    after ‘a’)
+    -->
+
+    <interface name = "dev.middleware.lte">
+
+        <!--
+            property soft
+        -->
+        <!-- 2016-06-15 16:43:26 -->
+        <property name = "BuildTime"        type = "s"    access = "read"/>
+        <property name = "verison"          type = "s"    access = "read"/>
+
+        <!--
+            module misc
+        -->
+        <property name = "HardwareModel"  type = "s"    access = "read"/>
+
+        <method   name = "MobileBaseStationTime">
+            <arg  name = "time"    direction = "out"    type = "s"/>
+        </method>
+
+        <!--
+            property sim
+        -->
+        <property name = "ICCID"        type = "s"      access = "read"/>
+        <property name = "PhoneNum"     type = "s"      access = "read"/>
+
+        <!--
+            dial through lte module
+        -->
+        <method   name = "Dial">
+            <arg  name = "number" direction = "in"  type = "s"/>
+            <arg  name = "res"    direction = "out" type = "b"/>
+        </method>
+
+        <method   name = "Handup">
+
+        </method>
+
+        <property name = "DialStatus"   type = "y" access = "read"/>
+
+        <signal   name = "DialStautsSignal">
+            <arg  name = "dial_status" type = "y"/>
+            <arg  name = "dial_number" type = "s"/>
+        </signal>
+
+        <!--
+            cellular data manager
+        -->
+        <method   name = "OpenCellularData">
+            <arg  name = "res"    direction = "out" type = "b"/>
+        </method>
+
+        <method   name = "CloseCellularData">
+
+        </method>
+
+        <property name = "CellularStatus"   type = "y"  access = "read"/>
+
+        <signal   name = "CellularStatusSignal">
+            <arg  name = "cellular_status"  type = "y"/>
+        </signal>
+
+    </interface>
+
+</node>
+
